@@ -1,0 +1,27 @@
+{
+  "name": "rwd",
+  "version": "0.0.1",
+  "dependencies": {},
+  "description": "Learn to build a mobile-first website",
+  "main": "gulp.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huntdream/mobile-first.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huntdream/mobile-first/issues"
+  },
+  "homepage": "https://github.com/huntdream/mobile-first#readme"
+}
