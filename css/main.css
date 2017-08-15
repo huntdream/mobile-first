@@ -132,6 +132,7 @@ li {
 
 .user-avatar {
     max-width: 42px;
+    min-width: 42px;
 }
 
 .user-avatar img {
