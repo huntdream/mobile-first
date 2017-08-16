@@ -2,7 +2,7 @@ $(document).ready(function () {
     const menuWrapper = $('.nav-bar-tabs');
     const input = $('#message');
     const text = $('#text');
-    $('.toggle').on('click', function (e) {
+    $('.toggle').on('click', function () {
         $(menuWrapper).toggleClass('showMenu');
     });
     $(menuWrapper).on('click', function (e) {
