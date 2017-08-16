@@ -121,6 +121,7 @@ li {
     line-height: 50px;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
     padding: 0 12px;
 }
 
@@ -128,9 +129,45 @@ li {
     background-color: transparent;
     border: 0;
     outline: none;
-    padding: 0 12px;
-    max-width: 44px;
+    width: 40px;
+    height: 40px;
+    padding:0;
+    position: relative;
 }
+
+.toggle svg {
+    display: block;
+    margin:auto;
+}
+
+.ripple {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: rgba(159, 160, 255, 0.55);
+    opacity: 0.4;
+    animation: ripple 600ms ease-in;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+    }
+    30% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 .user-avatar {
     max-width: 42px;
@@ -255,6 +292,7 @@ form:after {
     transform-origin: top left;
 }
 
+
 @keyframes higher {
     from {
         height: 0;
@@ -278,10 +316,19 @@ form:after {
         padding-top: 50px;
         box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .26);
         overflow: hidden;
-        animation: wider 500ms ease-in-out;
+        animation: moveIn 500ms ease-in-out;
     }
 
-    @keyframes wider {
+    @keyframes moveOut {
+        from {
+            width:50%;
+        }
+        to {
+            width:0;
+        }
+    }
+
+    @keyframes moveIn {
         from {
             width: 0;
         }

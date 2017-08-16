@@ -2,6 +2,7 @@ $(document).ready(function () {
     const menuWrapper = $('.nav-bar-tabs');
     const input = $('#message');
     const text = $('#text');
+    const div = document.createElement('div');
     $('.toggle').on('click', function () {
         $(menuWrapper).toggleClass('showMenu');
     });
@@ -14,7 +15,15 @@ $(document).ready(function () {
     $(input).on('focus',function () {
         $(text).addClass("fly-above");
     });
+
     $(input).on('blur',function () {
-        $(text).removeClass("fly-above");
+        if(!($(input).val())) {
+            $(text).removeClass("fly-above");
+        }
     });
+
+    $('button').on('click',function () {
+        $(this).append(div);
+        div.className='ripple';
+    })
 });
