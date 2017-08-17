@@ -99,6 +99,12 @@ body {
     padding-top: 60px;
 }
 
+button{
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    outline: none;
+}
+
 li {
     list-style: none;
     color: rgba(0, 0, 0, .54);
@@ -127,8 +133,6 @@ li {
 
 .toggle {
     background-color: transparent;
-    border: 0;
-    outline: none;
     width: 40px;
     height: 40px;
     padding:0;
