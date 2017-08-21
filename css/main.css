@@ -146,6 +146,7 @@ li {
     height: 40px;
     padding: 0;
     position: relative;
+    visibility: hidden;
 }
 
 .toggle svg {
@@ -256,6 +257,17 @@ li {
     padding: 8px 0;
     cursor: pointer;
     line-height:29px;
+}
+
+.nav-bar-tabs a {
+    display: block;
+    width:100%;
+    margin:0;
+    height:100%;
+}
+
+.active-item{
+    background-color: #eee;
 }
 
 li:hover {
@@ -378,6 +390,9 @@ form:after {
 }
 
 @media screen and (max-width: 576px) {
+    .toggle{
+        visibility: visible;
+    }
     .container{
         margin-left:0;
         max-width:100%;

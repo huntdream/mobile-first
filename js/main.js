@@ -8,6 +8,9 @@ $(document).ready(function () {
             $(menu).toggleClass('showMenu');
     });
 
+    $(menuWrapper>'li').on('click',function () {
+        $(menuWrapper).addClass('active-item');
+    },false);
 
     $(input).on('focus', function () {
         $(text).addClass("fly-above");
