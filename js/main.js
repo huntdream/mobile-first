@@ -3,14 +3,19 @@ $(document).ready(function () {
     const menu = $('.menu');
     const input = $('#message');
     const text = $('#text');
+    const link = $('.nav-bar-tabs li');
     const div = document.createElement('div');
     $('.toggle').on('click', function () {
             $(menu).toggleClass('showMenu');
     });
 
-    $(menuWrapper>'li').on('click',function () {
-        $(menuWrapper).addClass('active-item');
-    },false);
+    $(link).on('click',function (e) {
+        console.log(e.target.nodeName);
+        if(e.target.nodeName==='A'){
+            $(this).siblings().removeClass('active-item');
+            $(this).addClass('active-item');
+        }
+    });
 
     $(input).on('focus', function () {
         $(text).addClass("fly-above");
