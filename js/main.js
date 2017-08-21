@@ -6,7 +6,6 @@ $(document).ready(function () {
     const div = document.createElement('div');
     $('.toggle').on('click', function () {
             $(menu).toggleClass('showMenu');
-            $('.container').toggleClass('push-left')
     });
 
 
