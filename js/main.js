@@ -1,29 +1,27 @@
 $(document).ready(function () {
     const menuWrapper = $('.nav-bar-tabs');
+    const menu = $('.menu');
     const input = $('#message');
     const text = $('#text');
     const div = document.createElement('div');
     $('.toggle').on('click', function () {
-        $(menuWrapper).toggleClass('showMenu');
-    });
-    $(menuWrapper).on('click', function (e) {
-        if (e.target.tagName === 'NAV') {
-            $(menuWrapper).removeClass('showMenu');
-        }
+            $(menu).toggleClass('showMenu');
+            $('.container').toggleClass('push-left')
     });
 
-    $(input).on('focus',function () {
+
+    $(input).on('focus', function () {
         $(text).addClass("fly-above");
     });
 
-    $(input).on('blur',function () {
-        if(!($(input).val())) {
+    $(input).on('blur', function () {
+        if (!($(input).val())) {
             $(text).removeClass("fly-above");
         }
     });
 
-    $('button').on('click',function () {
+    $('button').on('click', function () {
         $(this).append(div);
-        div.className='ripple';
+        div.className = 'ripple';
     })
 });
