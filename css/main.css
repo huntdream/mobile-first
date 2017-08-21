@@ -238,6 +238,7 @@ li {
     background-color: #fff;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
     box-shadow: 2px 0 5px 0 rgba(0, 0, 0, .26);
+    z-index: 999;
 }
 
 .nav-bar-tabs {
@@ -387,13 +388,6 @@ form:after {
 }
 
 @media screen and (max-width: 576px) {
-    .menu {
-        background-color: #fff;
-    }
-    .nav-bar-tabs {
-        height: calc(100vh - 100px);
-        background-color: #fff;
-    }
 
     .fly-above {
         -webkit-transform: translateY(-100%);
