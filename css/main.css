@@ -146,7 +146,6 @@ li {
     height: 40px;
     padding: 0;
     position: relative;
-    visibility: hidden;
 }
 
 .toggle svg {
@@ -251,6 +250,10 @@ li {
     overflow: hidden;
 }
 
+.toggleMenu {
+    width:0;
+}
+
 .nav-bar-tabs li {
     text-align: center;
     font-size: 24px;
@@ -280,8 +283,17 @@ li:hover{
 .container {
     max-width: calc(100% - 280px);
     position: relative;
-    margin-left: 300px;
+    padding-left: 300px;
     background-color: #F7F7F7;
+    margin:0 auto;
+    transition: padding-left .2s linear .1s;
+}
+
+@media screen and (min-width: 576px) {
+    .togglePadding {
+        padding-left:0;
+    }
+
 }
 
 main {
@@ -312,6 +324,7 @@ article:hover {
     border: none;
     outline: none;
     text-align: start;
+    background-color: transparent;
 }
 
 .say-something {
@@ -386,13 +399,14 @@ form:after {
     .container{
         margin-left:0;
         max-width:100%;
+        padding:0;
     }
 
     .menu {
         width:0;
     }
 
-    .showMenu {
+    .toggleMenu {
         width: 40%;
     }
 

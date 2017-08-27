@@ -1,17 +1,25 @@
 $(document).ready(function () {
-    const menuWrapper = $('.nav-bar-tabs');
-    const menu = $('.menu');
-    const input = $('#message');
-    const text = $('#text');
-    const link = $('.nav-bar-tabs li');
-    const div = document.createElement('div');
+    const menuWrapper = $('.nav-bar-tabs'),
+        menu = $('.menu'),
+        input = $('#message'),
+        text = $('#text'),
+        link = $('.nav-bar-tabs li'),
+        div = document.createElement('div'),
+        container = $('.container');
+
     $('.toggle').on('click', function () {
-            $(menu).toggleClass('showMenu');
+        $(menu).toggleClass('toggleMenu');
+        $(container).toggleClass('togglePadding');
     });
 
-    $(link).on('click',function (e) {
-        console.log(e.target.nodeName);
-        if(e.target.nodeName==='A'){
+    $(link).on('click', function (e) {
+        let Point = {
+            x:e.pageX-$(this).offset().top,
+            y:e.pageY-$(this).offset().left
+        };
+        console.log(Point);
+
+        if (e.target.nodeName === 'A') {
             $(this).siblings().removeClass('active-item');
             $(this).addClass('active-item');
         }
